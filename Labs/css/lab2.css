@@ -1,0 +1,50 @@
+li:first-of-type{
+    font-weight: bold;
+}
+a:last-child {
+    color: red;
+}
+input [disabled]{
+    background-color: gray;
+}
+div > p{
+    font-weight: bold;
+    font-size: 16px;
+}
+*[href^="https"]{
+    color: green!important;;
+}
+input[type="text"]{
+    border-width: 1px;
+    border-color: blue;
+}
+li:first-child{
+    font-size: 24px;
+}
+li:last-child{
+    font-size: 24px;
+}
+input:checked{
+    accent-color: lightblue;
+}
+li > a{
+    text-decoration: underline;
+}
+li:nth-child(even){
+    font-weight: bold;
+}
+input[type="text"]:not([disabled]){
+    background-color: gray;
+}
+p:first-child{
+    font-size: 24px;
+}
+.special + li{
+    text-decoration: underline;
+}
+p::first-letter{
+    font-size: 36px;
+}
+a::after{
+    content: "↗";
+}
