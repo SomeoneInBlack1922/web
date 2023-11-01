@@ -1,0 +1,41 @@
+body{
+    margin:0;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 6fr 22fr 11fr 11fr;
+}
+div{
+    border: 2px solid gray;
+}
+div.example{
+    background-color: aquamarine;
+    border-color: rgb(0, 0, 0);
+}
+div.top{
+    grid-column: 1 / 5;
+    background-color: blue;
+}
+div.left{
+    grid-row: 2 / 5;
+    background-color: blueviolet;
+}
+div.workday_top{
+    background-color: aquamarine;
+    padding: 0;
+}
+div.workday_bottom{
+    background-color: aquamarine;
+    grid-row:span 2;
+}
+div.weekend{
+    background-color: aquamarine;
+}
+textarea{
+    width: inherit;
+    height: inherit;
+    resize: none;
+    margin: 0;
+    border: 0;
+}
