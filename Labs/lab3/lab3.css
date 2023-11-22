@@ -1,7 +1,9 @@
 body{
-    position: absolute;
+    padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
 }
 div.fix{
     position: fixed;
@@ -23,7 +25,6 @@ a:hover{
     background-color: rgb(172, 174, 175);
 }
 div.right{
-    position: fixed;
     margin: 0%;
     gap:15px;
     height: 100vh;
@@ -38,16 +39,12 @@ div.right > div{
     width: 90%;
 }
 div.left{
-    margin-left: 206px;
-    margin-top: 54px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    z-index: 1;
-}
-div.left > a{
-    width: 93%;
+    position: relative;
+    width: calc(100vw - 206px);
 }
 div.menu{
     background-color: blue;
@@ -121,23 +118,33 @@ div.subscribes > a{
     border-radius: 50px;
 }
 div.topWraper{
-    position: fixed;
+    position: relative;
     padding: 0%;
-    margin-left: 0%;
-    margin-right: 0%;
+    margin: 0;
     height: auto;
-    width: 100vw;
+    width: 100%;
+    padding-left: 206px;
+}
+div.fixedWraper{
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 206px);
+    display: block;
 }
 div.topBar{
-    margin-left: 206px;
     background-color: darkseagreen;
     height: 54px;
-    width: 100vw-206px;
-    z-index: 2;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+div.fixed{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
 }
 div.topButtoms{
     background-color: chocolate;
@@ -151,7 +158,10 @@ div.content{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: start;
-    z-index: 1;
+    position: fixed;
+    height: calc(100vh - 54px);
+    overflow: auto;
+    top: 54px;
 }
 div.content > div.video{
     width: 300px;
