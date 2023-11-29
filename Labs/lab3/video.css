@@ -1,0 +1,30 @@
+
+a.video{
+    width: 300px;
+    height: 270px;
+    position: relative;
+    margin: 40px 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    text-decoration: none;
+}
+a.video > img{
+    width:300px;
+    height: 200px;
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+}
+a.video > p.name{
+    font-size: larger;
+    margin:0;
+    margin-top: 10px;
+    height: 25px;
+    padding-left: 10px;
+}
+a.video > p.desc{
+    font-size: smaller;
+    margin:0;
+    height: 25px;
+    padding-left: 10px;
+}
