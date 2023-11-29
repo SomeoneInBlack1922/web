@@ -1,17 +1,18 @@
 body{
     margin:0;
-    display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 6fr 22fr 11fr 11fr;
 }
 div{
-    border: 2px solid gray;
+    outline: 2px solid gray;
 }
-div.example{
-    background-color: aquamarine;
-    border-color: rgb(0, 0, 0);
+div.container{
+    display: grid;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 6fr 22fr 11fr 11fr;
 }
 div.top{
     grid-column: 1 / 5;
@@ -24,18 +25,37 @@ div.left{
 div.workday_top{
     background-color: aquamarine;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 div.workday_bottom{
     background-color: aquamarine;
     grid-row:span 2;
+    display: flex;
+    flex-direction: column;
 }
 div.weekend{
     background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+div.stickTop{
+    flex-shrink: 0;
+    height: 40px;
+}
+div.weekend > div.stickTop{
+    flex-shrink: 0;
+    height: 40px;
 }
 textarea{
-    width: inherit;
-    height: inherit;
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 40px;
     resize: none;
     margin: 0;
     border: 0;
+}
+div.weekend > textarea{
+    flex-grow: 1;
+    flex-shrink: 1;
 }
