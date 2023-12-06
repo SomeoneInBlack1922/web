@@ -170,7 +170,7 @@ div.content{
     top: 54px;
 }
 #search{
-    height: 75%;
+    height: 30px;
     width: 70%;
     font-size: large;
     outline-color: rgb(226, 231, 236);
