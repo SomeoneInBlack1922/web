@@ -2,6 +2,7 @@ body{
     margin:0;
     width: 100vw;
     height: 100vh;
+    font-family:'Arial Narrow', Arial, sans-serif;
 }
 div{
     outline: 2px solid gray;
@@ -16,7 +17,11 @@ div.container{
 }
 div.top{
     grid-column: 1 / 5;
-    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding-inline: 1%;
+    line-height: 1;
 }
 div.left{
     grid-row: 2 / 5;
@@ -58,4 +63,43 @@ textarea{
 div.weekend > textarea{
     flex-grow: 1;
     flex-shrink: 1;
+}
+div.topHolder{
+    padding: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+p.title{
+    display: inline;
+    font-size: 100px;
+    height: fit-content;
+    margin-block: 0;
+    padding: 0;
+    line-height: 1;
+}
+div.inputWrap{
+    display: inline;
+    padding:0;
+    margin:0;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: gray;
+    outline: 0;
+}
+input{
+    outline:0;
+    border:0;
+    color:gray;
+    padding: 0 0 0 3px;
+    margin:0;
+    font-size: 15px;
+}
+span.top{
+    display: inline;
+}
+div.verticalWrap{
+    margin: 0 0 5px 0;
+    padding: 0;
 }
