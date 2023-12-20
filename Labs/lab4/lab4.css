@@ -4,9 +4,9 @@ body{
     height: 100vh;
     font-family:'Arial Narrow', Arial, sans-serif;
 }
-div{
+/*div{
     outline: 2px solid gray;
-}
+}*/
 div.container{
     display: grid;
     margin: 0;
@@ -102,4 +102,9 @@ span.top{
 div.verticalWrap{
     margin: 0 0 5px 0;
     padding: 0;
+    display: flex;
+    justify-content: end;
+}
+input[type="checkbox"]{
+    margin-left: 5px;
 }
