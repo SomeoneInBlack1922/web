@@ -3,33 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторні роботи</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="logo.png" type="image/jpg">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="top_bar">
-        <a href="practs.html" class="top">Практичні</a>
-        <div class="top_line"></div>
-        <a class="current_top">Лабораторні</a>
+    <div class="left">
+        <button class="leftButtom" id="0" onclick="frameShift('/CV/me.html', '0')">Про себе</button>
+        <button class="leftButtom" id="1" onclick="frameShift('/Labs/lab1/lab1.html', '1')">Лабораторна 1</button>
+        <button class="leftButtom" id="2" onclick="frameShift('/Labs/lab2/lab2.html', '2')">Лабораторна 2</button>
+        <button class="leftButtom" id="3" onclick="frameShift('/Labs/lab3/lab3.html', '3')">Лабораторна 3</button>
+        <button class="leftButtom" id="4" onclick="frameShift('/Labs/lab4/lab4.html', '4')">Лабораторна 4</button>
+        <button class="leftButtom" id="5" onclick="frameShift('/Labs/lab5/lab5.html', '5')">Лабораторна 5</button>
+        <button class="leftButtom" id="6" onclick="frameShift('/Labs/lab1/lab1.html', '6')">Лабораторна 6</button>
+        <button class="leftButtom" id="7" onclick="frameShift('/Labs/lab1/lab1.html', '7')">Лабораторна 7</button>
+        <button class="leftButtom" id="8" onclick="frameShift('/Labs/lab1/lab1.html', '8')">Лабораторна 8</button>
+        <button class="leftButtom extraOff" class="leftButtom" id="extraLink" onclick="openSite()" disabled>Відкрити в іншій вкладці↗</button>  
     </div>
-    <div class="content">
-        <a href="Labs/lab1/lab1.html" class="frame">
-            <img src="pic/lab1.png" alt="Image not found" class="frame">
-            <div class="frame_text">Лаба 1</div>
-        </a>
-        <a href="Labs/lab2/lab2.html" class="frame">
-            <img src="pic/lab2.png" alt="Image not found" class="frame">
-            <div class="frame_text">Лаба 2</div>
-        </a>
-        <a href="Labs/lab3/lsb3.html" class="frame">
-            <img src="pic/lab3.png" alt="Image not found" class="frame">
-            <div class="frame_text">Лаба 3</div>
-        </a>
-        <a href="Labs/lab4/lab4.html" class="frame">
-            <img src="pic/lab4.png" alt="Image not found" class="frame">
-            <div class="frame_text">Лаба 4</div>
-        </a>
-    </div>
+    <iframe class="right" src="/CV/me.html" id="frame"></iframe>
+    <script>
+        var theLink;
+        var extra=document.getElementById("extraLink");
+        function frameShift(link, id){
+            document.getElementById("frame").src=link;
+            theLink=link
+            if(id!='0'){
+                extra.src=link;
+                extra.disabled = false;
+            }
+            else{
+                extra.disabled = true;
+            }
+        }
+        function openSite(){
+            window.open(theLink);
+        }
+    </script>
 </body>
 </html>

@@ -48,3 +48,7 @@ p::first-letter{
 a::after{
     content: "↗";
 }
+html{
+    height: 100%;
+    width: 100%;
+}
