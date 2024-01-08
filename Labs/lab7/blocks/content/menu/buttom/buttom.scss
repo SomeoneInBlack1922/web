@@ -1,0 +1,28 @@
+.buttom{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border-width: 0 0 5px 0;
+    border-style: solid;
+    border-color: rgb(188, 16, 51);
+    font-family: inherit;
+    color: inherit;
+    background-color: rgb(188, 16, 51);
+    transition: 0.1s ease;
+    &:hover{
+        background-color: crimson;
+        border-color: crimson;
+    }
+}
+.unactive{
+    background-color: rgb(188, 16, 51);
+}
+.active{
+    background-color: crimson;
+    border-style: solid;
+    border-color: antiquewhite;
+    &:hover{
+        border-color: antiquewhite;
+    }
+}

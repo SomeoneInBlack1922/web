@@ -1,0 +1,10 @@
+.content{
+    height: 700px;
+    width: 1000px;
+    background-color: rgb(188, 16, 51);
+    margin-right: 70px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+}

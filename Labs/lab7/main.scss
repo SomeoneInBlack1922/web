@@ -1,0 +1,27 @@
+@import "var.scss";
+@import "blocks/image/tree-image.scss";
+@import "blocks/content/content.scss";
+@import "blocks/content/menu/menu.scss";
+@import "blocks/content/menu/buttom/buttom.scss";
+@import "frame-files/text.scss";
+@import "frame-files/frame.scss";
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: $color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Brush Script MT', cursive;
+    color:antiquewhite;
+}

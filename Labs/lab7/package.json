@@ -1,0 +1,14 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "Репозиторій для університетських проектів",
+  "main": "index.js",
+  "scripts": {
+    "compile" : "sass --watch --no-source-map main.scss main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass":"^1.69.7"
+  }
+}

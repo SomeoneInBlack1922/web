@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <img src="blocks/image/tree.png" alt="" class="tree-image">
+    <div class="content">
+        <div class="menu">
+            <button class="buttom" id="1" onclick="click('/frame-files/hello.html', '1')">Про цей рік</button>
+            <button class="buttom" id="2" onclick="click('/frame-files/about.html', '2')">Про цей рік</button>
+            <button class="buttom" id="3" onclick="click('/frame-files/peple.html', '3')">Про цей рік</button>
+        </div>
+        <iframe src="frame-files/hello.html" frameborder="0" class="frame"></iframe>
+    </div>
+    <script defer>
+        document.getElementById('1').classList.add("active");
+        var first = document.getElementsByClassName("frame");
+        var second = document.getElementById("1");
+        console.log(first);
+        console.log(second);
+        function click(link, id){
+            document.getElementsByClassName("frame").src=link;
+            document.getElementById(id).classList.add("active");
+        }
+    </script>
+</body>
+</html>

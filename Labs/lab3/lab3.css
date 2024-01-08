@@ -175,17 +175,19 @@ div.content{
     font-size: large;
     outline-color: rgb(226, 231, 236);
     border-radius: 10px 0 0 10px;
+    font-family: inherit;
 }
 #search:focus{
     outline: rgb(226, 231, 236);;
 }
 #searchButton{
-    height: 75%;
+    height: 30px;
     font-size: large;
     background-color: white;
     outline-color: rgb(226, 231, 236);
     border-radius: 0 10px 10px 0;
     transition: 0.25s;
+    font-family: inherit;
 }
 #searchButton:hover{
     transition: 0.25s;
