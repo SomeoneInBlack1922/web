@@ -18,8 +18,11 @@
     </div>
     <script defer>
         document.getElementById('1').classList.add("active");
+        var previous = "1";
         function click(link, id){
             document.getElementsByClassName("frame").src=link;
+            document.getElementById(previous).classList.remove("active");
+            previous=id;
             document.getElementById(id).classList.add("active");
         }
     </script>
