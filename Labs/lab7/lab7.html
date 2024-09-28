@@ -5,25 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="blocks/content/frame/texts.css">
 </head>
 <body>
     <img src="blocks/image/tree.png" alt="" class="tree-image">
     <div class="content">
         <div class="menu">
-            <button class="buttom" id="1" onclick="click('/frame-files/hello.html', '1')">Про цей рік</button>
-            <button class="buttom" id="2" onclick="click('/frame-files/about.html', '2')">Про цей рік</button>
-            <button class="buttom" id="3" onclick="click('/frame-files/peple.html', '3')">Про цей рік</button>
+            <button class="buttom" id="1" onclick="shift('frame-files/hello.html', '1', 'first')">Про цей рік</button>
+            <button class="buttom" id="2" onclick="shift('frame-files/about.html', '2', 'second')">Про цей рік</button>
+            <button class="buttom" id="3" onclick="shift('frame-files/peple.html', '3', 'thirst')">Про цей рік</button>
         </div>
-        <iframe src="frame-files/hello.html" frameborder="0" class="frame"></iframe>
+        <div class="frame">
+            <div class="frame" id="first">
+                <h1>Вітаємо з 2024 роком!</h1>
+                <h2>За китайським календар</h2>
+            </div>
+            <div class="frame disbled" id="second">Собака</div>
+            <div class="frame disbled" id="thirst">Вулиця</div>
+        </div>
     </div>
     <script defer>
         document.getElementById('1').classList.add("active");
-        var first = document.getElementsByClassName("frame");
-        var second = document.getElementById("1");
-        console.log(first);
-        console.log(second);
-        function click(link, id){
-            document.getElementsByClassName("frame").src=link;
+        var previous = "1";
+        var previousFrame = "first";
+        function shift(link, id, frameId){
+            console.log("work");
+            document.getElementById(previousFrame).classList.add("frame.disabled");
+            previousframe="frameId";
+            document.getElementById(frameId).classList.remove("frame.disabled");
+            document.getElementById(previous).classList.remove("active");
+            previous=id;
             document.getElementById(id).classList.add("active");
         }
     </script>

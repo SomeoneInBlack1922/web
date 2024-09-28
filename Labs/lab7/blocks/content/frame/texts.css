@@ -1,0 +1,15 @@
+.frame{
+    position: relative;
+}
+.frame > div{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.frame.disbled{
+    display: none;
+}
